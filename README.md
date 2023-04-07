@@ -19,7 +19,7 @@
 |                                  [Netlas](https://netlas.io/)                                  | daily limits ||
 
 
-#### Add API keys for working with resources in a file `src/config.py`
+#### Add API keys for working with resources in the file `src/config.py`
 ### 1. Set up rules for companies
 To get favicons hashes, you can put them in `src/settings/favicons` and run.
 
