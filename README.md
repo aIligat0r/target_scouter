@@ -38,3 +38,5 @@ ips:
 ```
 ### 2. Run `src/main.py `
 The results are written in JSON format to the file `data/results.json`. Search for indicators for the last month.
+
+### Good luck friend!
