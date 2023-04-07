@@ -5,6 +5,11 @@
 ### Algorithm:
 ![img.png](scheme.jpeg)
 
+### Search by:
+* favicons hash (mmh3, sha256);
+* ips;
+* \<title\> keywords;
+
 ## Retrieves data from resources:
 |                                            Resource                                            |  API limits  |
 |:----------------------------------------------------------------------------------------------:|:------------:|
