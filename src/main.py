@@ -45,6 +45,7 @@ def main(settings: dict):
 
     phish_stats = phishstats.api.PhishStats()
     try:
+        phish_stats_results = []
         if settings["keywords"]["enable"]:
             phish_stats_results = phish_stats.search_titles(
                 settings["keywords"]["title"]
