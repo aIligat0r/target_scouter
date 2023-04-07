@@ -6,7 +6,7 @@
 ![img.png](scheme.jpeg)
 
 ### Search by:
-* favicons hash (mmh3, sha256);
+* favicons hashes (mmh3, sha256);
 * ips;
 * \<title\> keywords;
 
