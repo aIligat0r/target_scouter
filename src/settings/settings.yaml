@@ -1,0 +1,10 @@
+favicons:
+  sha256hash: ["69c02aba6127e6c9c73feb632f9d964f0cde543f7949b1345d6cf8b3d64c02bb"]
+  murmurhash: [268519607]
+
+keywords:
+  title: ["TradingView"]
+
+ips:
+  ips: ["1.1.1.1"]
+  enable: False
