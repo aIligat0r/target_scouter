@@ -33,7 +33,6 @@ class ViewDNS:
         for ip in ips:
             query = "/reverseip/?host=%s" % ip
             api_url = self._get_url(query)
-            print(api_url)
             response = self._requester(api_url)
             for domain in response["response"]["domains"]:
                 results.append(

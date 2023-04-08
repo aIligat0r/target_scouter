@@ -29,11 +29,11 @@ Fill in the rules in `src/settings/settings.yaml`:
 favicons:
   sha256hash: ["<STR: sha256 hash favicon>", ...]
   murmurhash: [<mmh3 hash favicon>, ...]
-  enable: False
+  enable: True
 
 keywords:
   title: ["<title keyword>", ...]
-  enable: False
+  enable: True
 
 ips:
   ips: ["<ip>", ...]
