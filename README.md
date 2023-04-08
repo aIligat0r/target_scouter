@@ -7,17 +7,18 @@
 
 ### Search by:
 * favicons hashes (mmh3, sha256);
-* ips;
+* ips (relations hosts on IP);
 * \<title\> keywords;
 
 ## Retrieves data from resources:
-|                Resource                |           API limits            |
-|:--------------------------------------:|:-------------------------------:|
-|    [Shodan](https://www.shodan.io/)    |                *                |
-|     [URLscan](https://urlscan.io/)     |                *                |
-| [PhishStats](https://phishstats.info/) |                *                |
-|    [ViewDNS](https://viewdns.info/)    | Free API 250 requests per month |
-|      [Netlas](https://netlas.io/)      |          daily limits           ||
+|                 Resource                  |           API limits            |
+|:-----------------------------------------:|:-------------------------------:|
+|     [Shodan](https://www.shodan.io/)      |                *                |
+|      [URLscan](https://urlscan.io/)       |                *                |
+|  [PhishStats](https://phishstats.info/)   |                *                |
+|     [ViewDNS](https://viewdns.info/)      | Free API 250 requests per month |
+| [VirusTotal](https://www.virustotal.com/) |   	Free API 500 lookups / day   |
+|       [Netlas](https://netlas.io/)        |          daily limits           ||
 
 
 #### Add API keys for working with resources in the file `src/config.py`
