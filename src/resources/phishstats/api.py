@@ -2,6 +2,7 @@ import requests
 from urllib.parse import urljoin
 
 from src import config
+from src.utils.session import session
 
 
 class PhishStats:
@@ -13,11 +14,11 @@ class PhishStats:
     API_URL = urljoin(config.PHISHSTATS_URL, "/api/phishing")
     RETRIES = 3  # Sometimes the server gives the status 504
 
-    def _requester(self, url: str):
-        for retry in range(self.RETRIES):
-            response = requests.get(url)
-            if response.status_code == 200:
-                return response
+    @staticmethod
+    def _requester(url: str):
+        response = session.get(url)
+        if response.status_code == 200:
+            return response
 
     @staticmethod
     def _parse_response(response_results: requests.Response) -> list[dict]:

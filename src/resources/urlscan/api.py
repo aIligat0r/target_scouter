@@ -1,10 +1,10 @@
 import datetime
-import json
 
 import requests
 from urllib.parse import urljoin
 
 from src import config
+from src.utils.session import session
 
 
 class Urlscan:
@@ -44,7 +44,7 @@ class Urlscan:
         return results
 
     def _requester(self, url: str):
-        response = requests.get(url, headers=self.HEADERS)
+        response = session.get(url, headers=self.HEADERS)
         return response
 
     def _search(self, values: list, query_format: str) -> list[dict]:

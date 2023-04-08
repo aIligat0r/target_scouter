@@ -1,5 +1,3 @@
-import requests
-
 from urllib.parse import urljoin
 
 from src import config
@@ -16,7 +14,10 @@ class ViewDNS:
         """
         get API url with search method
         """
-        api_url = urljoin(config.VIEWDNS_API_URL, query + '&output=json&apikey=%s' % config.VIEWDNS_API_KEY)
+        api_url = urljoin(
+            config.VIEWDNS_API_URL,
+            query + "&output=json&apikey=%s" % config.VIEWDNS_API_KEY,
+        )
         return api_url
 
     @staticmethod
@@ -39,7 +40,7 @@ class ViewDNS:
                     {
                         "host": domain["name"],
                         "last_resolved": domain["last_resolved"],
-                        "ip": ip
+                        "ip": ip,
                     }
                 )
         return results
