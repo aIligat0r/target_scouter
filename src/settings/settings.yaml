@@ -1,12 +1,12 @@
 favicons:
   sha256hash: ["<STR: sha256 hash favicon>"]
   murmurhash: [<INT: mmh3 hash favicon>]
-  enable: True
+  enable: False
 
 keywords:
   title: ["<title keyword>"]
-  enable: True
+  enable: False
 
 ips:
-  ips: ["<ip>"]
-  enable: False
+  ips: ["185.163.159.72"]
+  enable: True

@@ -9,3 +9,5 @@ SHODAN_API_KEY = ""
 
 VIEWDNS_API_URL = "https://api.viewdns.info/"
 VIEWDNS_API_KEY = ""
+
+VIRUSTOTAL_API_KEY = ""
