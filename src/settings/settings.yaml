@@ -1,12 +1,12 @@
 favicons:
-  sha256hash: ["69c02aba6127e6c9c73feb632f9d964f0cde543f7949b1345d6cf8b3d64c02bb"]
-  murmurhash: [268519607]
-  enable: True
+  sha256hash: ["<STR: sha256 hash favicon>"]
+  murmurhash: [<INT: mmh3 hash favicon>]
+  enable: False
 
 keywords:
-  title: ["TradingView"]
-  enable: True
+  title: ["<title keyword>"]
+  enable: False
 
 ips:
-  ips: ["1.1.1.1"]
+  ips: ["<ip>"]
   enable: False

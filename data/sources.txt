@@ -1,6 +1,0 @@
-OpenPhish AI-powered list of potential phishing sites: OpenPhish https://openphish.com/
-PhishTank List of potential phishing sites: PhishTank https://www.phishtank.com/
-CertStream Suspicious domains observed on CertStream https://certstream.calidog.io/
-URLhaus Malware URL exchange by Abuse.ch: URLhaus https://urlhaus.abuse.ch/
-
-https://spyse.com/
