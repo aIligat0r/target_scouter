@@ -1,7 +1,7 @@
 import json
 import yaml
 
-from resources import urlscan, netlas_api, phishstats, shodan_api
+from resources import urlscan, netlas_api, phishstats, shodan_api, viewdns
 from logger import logger
 
 
@@ -50,11 +50,10 @@ def main(settings: dict):
             phish_stats_results = phish_stats.search_titles(
                 settings["keywords"]["title"]
             )
-            indicators_results += phish_stats_results
         if settings["ips"]["enable"]:
-            phish_stats_results = phish_stats.search_urls_by_ip(settings["ips"]["ips"])
-            indicators_results += phish_stats_results
-        logger.info("get data from PhishStats [len: %s]" % len(indicators_results))
+            phish_stats_results += phish_stats.search_urls_by_ip(settings["ips"]["ips"])
+        indicators_results += phish_stats_results
+        logger.info("get data from PhishStats [len: %s]" % len(phish_stats_results))
     except Exception as error:
         logger.error("get data from PhishStats - %s" % error)
 
@@ -70,9 +69,18 @@ def main(settings: dict):
                 settings["keywords"]["title"]
             )
         indicators_results += shodan_results
-        logger.info("get data from Shodan [len: %s]" % len(indicators_results))
+        logger.info("get data from Shodan [len: %s]" % len(shodan_results))
     except Exception as error:
         logger.error("get data from Shodan - %s" % error)
+
+    _viewdns = viewdns.api.ViewDNS()
+    try:
+        viewdns_results = []
+        if settings["ips"]["enable"]:
+            viewdns_results = _viewdns.search_domains_by_ips(settings["ips"]["ips"])
+        logger.info("get data from ViewDNS [len: %s]" % len(viewdns_results))
+    except Exception as error:
+        logger.error("get data from ViewDNS - %s" % error)
 
     indicators_results = duplicate_hosts(indicators_results)
     logger.info("all indicators count: %s" % len(indicators_results))

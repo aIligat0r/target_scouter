@@ -3,7 +3,7 @@
 ## The tool is designed for targeted exploration of similar brand resources
 
 ### Algorithm:
-![img.png](scheme.jpeg)
+![img.png](scheme.png)
 
 ### Search by:
 * favicons hashes (mmh3, sha256);
