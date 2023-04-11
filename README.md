@@ -23,7 +23,7 @@
 
 #### Add API keys for working with resources in the file `src/config.py`
 ### 1. Set up rules for companies
-To get favicons hashes, you can put them in `src/settings/favicons` and run.
+To get favicons hashes, you can put them in `src/settings/favicons` and run `src/settings/hasher.py`.
 
 Fill in the rules in `src/settings/settings.yaml`:
 ```yaml
