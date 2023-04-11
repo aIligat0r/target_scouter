@@ -107,7 +107,7 @@ def main(settings: dict):
     try:
         _vt_results = []
         if settings["ips"]["enable"]:
-            _vt_results = _vt.get_resolutions(["185.163.159.72"])
+            _vt_results = _vt.get_resolutions(settings["ips"]["ips"])
             logger.info("get data from VirusTotal by ips (len: %s)" % len(_vt_results))
         indicators_results += _vt_results
     except Exception as error:
