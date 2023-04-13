@@ -1,4 +1,3 @@
-import requests
 from urllib.parse import urljoin
 
 from src import config
@@ -21,7 +20,7 @@ class PhishStats:
             return response
 
     @staticmethod
-    def _parse_response(response_results: requests.Response) -> list[dict]:
+    def _parse_response(response_results: "requests.Response") -> list[dict]:
         """
         Parse results from JSON page
         :param response_results:
@@ -41,7 +40,7 @@ class PhishStats:
             )
         return results
 
-    def _search(self, values: list, query_format: str) -> list[dict]:
+    def _search(self, values: list, query_format: str) -> list[dict] or None:
         """
         Search by values (keywords, ips, ...)
         :param values:
@@ -51,7 +50,9 @@ class PhishStats:
         results = []
         for keyword in values:
             url = urljoin(self.API_URL, query_format % keyword)
-            response_results = requests.get(url)
+            response_results = self._requester(url)
+            if not response_results:
+                return
             parse_results = self._parse_response(response_results)
             results += parse_results
         return results

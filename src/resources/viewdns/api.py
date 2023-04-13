@@ -20,11 +20,6 @@ class ViewDNS:
         )
         return api_url
 
-    @staticmethod
-    def _requester(url: str):
-        response = session.get(url)
-        return response.json()
-
     def search_domains_by_ips(self, ips: list[str]) -> list:
         """
         Reverse IP Lookup - search domains on ip
@@ -33,7 +28,7 @@ class ViewDNS:
         for ip in ips:
             query = "/reverseip/?host=%s" % ip
             api_url = self._get_url(query)
-            response = self._requester(api_url)
+            response = session.get(api_url).json()
             for domain in response["response"]["domains"]:
                 results.append(
                     {
